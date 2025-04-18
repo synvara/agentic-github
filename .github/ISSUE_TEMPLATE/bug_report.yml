@@ -45,8 +45,11 @@ body:
       label: Version
       description: What version of our software are you running?
       options:
-        - 0.1.0 (Development)
-        - 0.2.0 (Latest)
+        - Latest Release
+        - Development Branch
+        - v0.2.0
+        - v0.1.0
+        - Other (please specify in environment section)
     validations:
       required: true
       
