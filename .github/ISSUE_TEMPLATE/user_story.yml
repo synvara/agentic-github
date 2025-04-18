@@ -109,14 +109,3 @@ body:
       label: Issue Metadata (JSON Format)
       description: Metadata in JSON format for reference/tooling.
       placeholder: |
-        ```json
-        {
-            "title": "E#S#: User Story Title",
-            "labels": ["story", "priority-medium"],
-            "assignees": ["developer-username"],
-            "milestone": "Sprint X"
-        }
-        ```
-      render: json
-    validations:
-      required: false
