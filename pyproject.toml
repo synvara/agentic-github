@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling"] # Example using Hatch as the build backend
+build-backend = "hatchling.build"
+
+[project]
+name = "template-python-vsa"
+version = "0.1.0"
+description = "A template project demonstrating VSA Architecture with FastAPI, uv, and ruff."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    { name = "Lance Lewandowski", email = "llewandowski@syndara.com" },
+]
+dependencies = [
+    "fastapi>=0.100.0", # For the web framework
+    "pydantic>=2.0",      # For data validation and settings management
+    "pydantic-settings>=2.0", # For settings management
+    "typer>=0.9.0", # For building CLI commands
+]
+
+[project.optional-dependencies]
+# Development and testing dependencies
+dev = [
+    "uvicorn[standard]>=0.20.0", # ASGI server with standard extras
+    "httpx>=0.25.0",             # Async HTTP client for testing FastAPI
+    "pytest>=7.0.0",              # Testing framework
+    "pytest-asyncio>=0.20.0",    # Pytest plugin for asyncio
+    "pytest-cov>=4.0",           # Pytest plugin for coverage
+    "ruff>=0.1.0",                # Linter and formatter
+    "mypy>=1.0",                    # Static type checker
+]
+
+[project.scripts]
+# Define runnable scripts via 'uv run <script_name>'
+hello-vsa = "template_python_vsa.feature_greeting.cli:run"
+
+[tool.ruff]
+# Common configuration for ruff (linter & formatter)
+target-version = "py39" # Target the minimum Python version for compatibility checks
+line-length = 88        # Compatible with Black's default
+
+[tool.ruff.lint]
+# Select lint rule categories:
+# E: pycodestyle Errors
+# W: pycodestyle Warnings
+# F: Pyflakes (syntax errors, undefined names)
+# I: isort (import sorting)
+# B: flake8-bugbear (potential bugs/design problems)
+# UP: pyupgrade (suggests modern syntax)
+select = ["E", "W", "F", "I", "B", "UP"]
+ignore = [] # Add specific rule codes to ignore if necessary
+# Example: ignore = ["E501"] # To ignore line length errors (if line-length isn't enforced by formatter)
+
+# Configure isort integration within ruff
+[tool.ruff.lint.isort]
+known-first-party = ["template_python_vsa"] # Treat 'template_python_vsa' as a first-party module
+
+[tool.ruff.format]
+# Configuration for the formatter (similar to Black)
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.hatch.build.targets.wheel]
+# Point hatchling to the package directory
+packages = ["template_python_vsa"]

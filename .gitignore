@@ -1,0 +1,45 @@
+# Virtual Environment
+.venv/
+venv/
+*.pyenv
+
+# Bytecode and Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+
+# Distribution / Build artifacts
+dist/
+build/
+*.egg-info/
+*.dist-info/
+*.whl
+
+# IDE / Editor specific
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific
+*.DS_Store
+Thumbs.db
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+
+# Secrets / Config (example - adjust as needed)
+.env
+.env.
+secrets.yaml
+
+# Lock file (initially ignored, will be added later)
+# uv.lock # Keep commented out or remove this line - uv.lock SHOULD be committed
+
+
