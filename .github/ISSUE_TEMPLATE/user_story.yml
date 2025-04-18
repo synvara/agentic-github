@@ -93,10 +93,10 @@ body:
       label: Story Wrap Up
       description: To be filled in AFTER execution.
       placeholder: |
-        - **Agent Model Used:** `<Model/Version>`
-        - **Agent Credit or Cost:** `<Cost>`
-        - **Date/Time Completed:** `<Timestamp in ISO format>`
-        - **Commit Hash:** `<Git Commit Hash>`
+        - **Agent Model Used:** `[Model/Version]`
+        - **Agent Credit or Cost:** `[Cost]`
+        - **Date/Time Completed:** `[Timestamp in ISO format]`
+        - **Commit Hash:** `[Git Commit Hash]`
         - **Change Log**
             - `<Brief description of change 1>`
             - `<Brief description of change 2>`
