@@ -1,6 +1,6 @@
 name: 📝 User Story
 description: Create a new user story
-title: "E#S#: "
+title: "[Epic]-[Story]: "
 labels: ["story"]
 body:
   - type: markdown
